@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
+import { CustomersModule } from './customers/customers.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -12,6 +13,6 @@ import { UsersModule } from './users/users.module';
       database: 'kangasoi_db',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
-  }), UsersModule],
+  }), UsersModule, CustomersModule],
 })
 export class AppModule {}

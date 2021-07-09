@@ -6,11 +6,16 @@ import { UsersService } from './users.service';
 @Crud({
     model : {
         type: User
+        
     }
 })
+
+
 @Controller('users')
 export class UsersController implements CrudController<User> {
 
     constructor(public service: UsersService) {}
     
 }
+
+
